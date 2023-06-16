@@ -1,0 +1,10 @@
+- op: add
+  path: /spec/destinations/-
+  value:
+    namespace: '*'
+    server: "*"
+- op: add
+  path: /spec/destinations/-
+  value:
+    namespace: '*'
+    server: https://1.2.3.4

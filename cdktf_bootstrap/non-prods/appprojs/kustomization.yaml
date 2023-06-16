@@ -1,0 +1,18 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+namespace: argocd
+resources:
+- ../../base/appprojs
+patchesJson6902:
+- path: patch_project.yaml
+  target:
+    group: argoproj.io
+    version: v1alpha1
+    kind: AppProject
+    name: apple
+- path: patch_project.yaml
+  target:
+    group: argoproj.io
+    version: v1alpha1
+    kind: AppProject
+    name: eggplant
